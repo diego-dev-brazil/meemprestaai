@@ -46,5 +46,9 @@ public class Emprestimo {
 	public void setQuandoFoiDevolvido(LocalDateTime quandoFoiDevolvido) {
 		this.quandoFoiDevolvido = quandoFoiDevolvido;
 	}
+	public Long getId() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getId'");
+	}
 	
 }
