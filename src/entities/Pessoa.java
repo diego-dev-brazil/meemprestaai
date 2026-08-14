@@ -2,7 +2,7 @@ package entities;
 
 public abstract class Pessoa {
 	String nome;
-	
+	Integer id;
 	
 
 	public Pessoa(String nome) {
@@ -17,6 +17,6 @@ public abstract class Pessoa {
 		this.nome = nome;
 	}
 
-    public abstract Object getId();
+    public abstract Integer getId();
 	
 }

@@ -16,5 +16,10 @@ public class Professor extends Pessoa{
 		this.materia = materia;
 	}
 
+	@Override
+	public Integer getId() {
+		return this.id;
+	}
+
 
 }
