@@ -1,6 +1,11 @@
-package entities;
+package com.meemprestaai.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Turma {
+	@Id
 	private String codigo;
 	private String sala;
 	public String getCodigo() {

@@ -1,12 +1,24 @@
-package entities;
+package com.meemprestaai.entities;
 
-import enum_entities.Categoria;
-import enum_entities.Status;
+import com.meemprestaai.enum_entities.Categoria;
+import com.meemprestaai.enum_entities.Status;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+
+@Entity
 public class Equipamento {
 	private  String modelo;
+	
+	@Id
 	private String numeroSerie;
+	
+	@Enumerated(EnumType.STRING)
 	private Status status;
+	
+	@Enumerated(EnumType.STRING)
 	private Categoria categoria;
 	
 	public Equipamento() {

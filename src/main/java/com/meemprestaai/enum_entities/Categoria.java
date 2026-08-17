@@ -1,4 +1,4 @@
-package enum_entities;
+package com.meemprestaai.enum_entities;
 
 public enum Categoria {
 	NOTEBOOK,
