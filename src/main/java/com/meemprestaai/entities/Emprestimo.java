@@ -1,13 +1,32 @@
-package entities;
+package com.meemprestaai.entities;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+@Entity
 public class Emprestimo {
+	@Id
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	private Long id;
+	
 	private LocalDateTime momentoEmprestimo;
 	private LocalDateTime momentoDevolucao;
 	private LocalDateTime quandoFoiDevolvido;
+	
+	@ManyToOne
 	private Pessoa pessoa;
+	
+	@ManyToOne
 	private Equipamento equipamento;
+	
+	public Emprestimo() {
+		
+	}
 	public Emprestimo(LocalDateTime momentoEmprestimo, LocalDateTime momentoDevolucao, Pessoa pessoa,
 			Equipamento equipamento) {
 		this.momentoEmprestimo = momentoEmprestimo;
@@ -45,6 +64,9 @@ public class Emprestimo {
 	}
 	public void setQuandoFoiDevolvido(LocalDateTime quandoFoiDevolvido) {
 		this.quandoFoiDevolvido = quandoFoiDevolvido;
+	}
+	public Long getId() {
+		return id;
 	}
 	
 }
